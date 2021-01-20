@@ -1,5 +1,6 @@
 .site-list {
   background-color: @basic-gray;
+  list-style: none;
 }
 
 .site-list__item {
@@ -10,4 +11,19 @@
   color: @basic-white;
   box-shadow: 0px 1px 0px #000000, inset 0px 1px 0px rgba(255, 255, 255, 0.15);
   padding: 116px, 25px;
+  width: 100%;
+}
+@media (min-width: @mobile-width-only) {
+  .site-list {
+    display: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .site-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 624px;
+  }
 }

@@ -1,8 +1,13 @@
+.reviews {
+  margin-bottom: 60px;
+}
+
 .reviews__item-author {
   font-weight: bold;
   font-size: 18px;
   line-height: 30px;
   color: @basic-black;
+  margin: 0;
 }
 
 .reviews__item-profession {
@@ -12,9 +17,26 @@
   color: @basic-gray;
 }
 
+@media (min-width: @mobile-width-only) {
+  .reviews__item-profession {
+    display: none;
+  }
+}
+
+.reviews__item {
+  margin: 50px auto 44px auto;
+}
+
 .reviews__item-paragraph {
   font-weight: normal;
   font-size: 14px;
   line-height: 30px;
   color: @basic-gray;
+}
+
+
+.reviews__list {
+  list-style: none;
+  text-align: center;
+  padding-left: 0;
 }

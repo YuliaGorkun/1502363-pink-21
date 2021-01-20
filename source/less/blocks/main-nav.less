@@ -1,7 +1,101 @@
 .main-nav {
   background-color: @black-transparant;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  min-height: 66px;
+  position: relative;
+  top: 100px;
+  z-index: 1;
+  width: 100%
+}
+
+/*.main-nav__toggle {
+  background-image: url(../img/open-menu.svg);
+}
+*/
+
+.main-nav__logo {
+  text-align: center;
+}
+
+@media (min-width: @mobile-width-only) {
+  .main-nav__logo {
+    margin: 22px 0 21px 20px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .main-nav__logo {
+  margin: 27px 0 43px 20px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-nav__logo {
+  margin: 27px 134px 43px 130px;
+  }
+  .main-nav__toggle {
+  display: none;
+}
 }
 
 .main-nav__toggle {
-  background-image: url(../img/open-menu.svg);
+  z-index: 2;
+  display: block;
+  width: 50px;
+  height: 24px;
+  margin: 21px 20px 21px 0;
+  cursor: pointer;
+  border: none;
+}
+
+
+.main-nav--closed .main-nav__toggle::before {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 17px;
+  width: 50px;
+  height: 2px;
+  background-color: #ffffff;
+  box-shadow: 0 8px 0 0 #ffffff, 0 16px 0 0 #ffffff;
+}
+
+.main-nav--closed .main-nav__toggle:active::before {
+  background-color: fade(#ffffff, 30%);
+  box-shadow:
+    0 8px 0 0 fade(#ffffff, 30%),
+    0 16px 0 0 fade(#ffffff, 30%);
+}
+
+.main-nav--opened .main-nav__toggle {
+  top: 0;
+  right: auto;
+  left: 0;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 24px;
+    left: 18px;
+    width: 50px;
+    height: 2px;
+    background-color: #ffffff;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+
+  &:active::before,
+  &:active::after {
+    background-color: fade(#ffffff, 30%);
+  }
 }
