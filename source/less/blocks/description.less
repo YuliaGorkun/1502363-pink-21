@@ -1,7 +1,6 @@
-@media (min-width: @mobile-width-only) {
-  .description {
+.description {
     display: none;
-  }
+    background-color: @basic-white;
 }
 
 .description__legend-title {
@@ -28,4 +27,65 @@
 
 .description__picture {
   background: url(../img/timer.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: block;
+  width: 238px;
+  height: 276px;
+  position: relative;
+}
+
+.description__picture-text{
+  font-style: normal;
+  font-weight: bold;
+  font-size: 96px;
+  line-height: 163px;
+  color: @dark-red;
+  text-align: center;
+  border: 16px solid @dark-red;
+  border-radius: 50%;
+  box-sizing: border-box;
+  position: relative;
+  padding: 26px 34px 32px 34px;
+  top: 73px;
+  left: 15px;
+}
+
+
+@media (min-width: @tablet-width) {
+  .description {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-column-gap: 0;
+    align-items: center;
+    z-index: 3;
+    padding: 39px 20px 72px 20px;
+  }
+
+  .description__picture {
+    margin-right: 72px;
+  }
+
+  .description__legend {
+    text-align: left;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .description__picture {
+    width: 298px;
+    height: 345px;
+    margin-right: 71px;
+  }
+
+  .description {
+    padding: 17px 166px 67px 131px;
+    background-color: @light-gray;
+}
+
+  .description__picture-text{
+    padding: 50px 50px 50px 50px;
+    top: 115px;
+    left: 29px;
+  }
 }

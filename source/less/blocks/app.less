@@ -2,6 +2,7 @@
 
 .app {
   background-color: @light-gray;
+  text-align: center;
 }
 
 .app__legend {
@@ -10,15 +11,67 @@ font-size: 14px;
 line-height: 18px;
 text-transform: uppercase;
 color:  @dark-red;
+text-align: center;
+}
+
+.app__list {
+  list-style: none;
+  display: grid;
+  grid-row-gap: 38px;
 }
 
 .app__item-radio {
   background: @basic-white;
   border: 2px solid  @border-gray;
+  display: block;
+  width: 37px;
+  height: 37px;
+  margin-right: 22px;
   &:hover {
     border: 2px solid @basic-gray;
   }
   &:focus {
     border: 2px solid @dark-red;
   }
+}
+
+.app__item {
+  display: flex;
+  flex-direction: row;
+}
+
+.app__fieldset {
+  border: none;
+}
+
+.app__item-label {
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 30px;
+  color: @basic-gray;
+  text-align: center;
+}
+
+@media (min-width: @tablet-width) {
+  .app__fieldset {
+    border: 2px solid #E5E5E5;
+    border-radius: 1px;
+    padding: 49px 392px 54px 60px;
+  }
+
+  .app__list{
+    padding: 0;
+    margin: 0;
+  }
+
+  .app {
+    background-color: @basic-white;
+    padding: 51px 22px 65px 22px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .app {
+  padding: 0 0 32px 0;
+}
 }

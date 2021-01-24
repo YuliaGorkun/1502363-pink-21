@@ -1,6 +1,86 @@
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.achievements__list {
+  list-style: none;
+}
+
 .form__info {
   font-weight: normal;
   font-size: 14px;
   line-height: 30px;
   color: @basic-gray;
+  text-align: center;
+  margin: 0;
+  padding: 54px 20px 55px 20px;
+}
+
+
+@media (min-width: @tablet-width) {
+  .form__info {
+  padding: 100px 85px 82px 85px;
+  order: 1;
+  }
+  .data {
+  order: 2;
+  }
+  .app {
+    order: 3;
+  }
+  .link {
+    order: 4;
+  }
+  .achievements {
+    order: 5;
+  }
+  .emotions {
+    order: 6;
+  }
+  .button {
+    order: 7;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form__info {
+  padding: 100px 222px 82px 222px;
+}
+  .form {
+    display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: baseline;
+  align-content: center;
+  }
+
+  .form__info {
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
+
+  .achievements {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    }
+
+    .achievements__list {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: auto auto;
+      grid-column-gap: 58px;
+      grid-row-gap: 47px;
+    }
+
+  .emotions {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  .button {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
 }

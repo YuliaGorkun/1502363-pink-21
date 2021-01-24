@@ -2,6 +2,30 @@
 
 .achievements {
   background-color: @light-gray;
+  text-align: center;
+  padding: 42px 54px 44px 22px;
+}
+
+.achievements__fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.achievements__list {
+  display: grid;
+  grid-template-rows: auto;
+  grid-row-gap: 47px;
+  width: 100%;
+  padding: 0;
+}
+
+.achievements__item {
+display: flex;
+align-content: center;
+align-self: center;
+flex-direction: row;
+text-align: center;
 }
 
 .achievements__info {
@@ -10,6 +34,7 @@
   line-height: 18px;
   text-transform: uppercase;
   color: @dark-red;
+  text-align: center;
 }
 
 .achievements__label {
@@ -17,16 +42,32 @@
   font-size: 18px;
   line-height: 30px;
   color: @basic-gray;
+  margin-left: 22px;
 }
 
 .achievements__checkbox {
-  background: @basic-white;
+  background-color: @basic-white;
   border: 2px solid  @border-gray;
   border-radius: 1px;
+  width: 35px;
+  height: 35px;
+  display: block;
   &:hover {
     border: 2px solid @basic-gray;
   }
   &:focus {
     border: 2px solid @dark-red;
   }
+}
+
+@media (min-width: @tablet-width) {
+  .achievements__fieldset {
+  border: 2px solid #E5E5E5;
+  border-radius: 1px;
+  padding: 42px 54px 44px 60px;
+}
+.achievements {
+  background-color: @basic-white;
+  padding: 65px 13px 0px 13px;
+}
 }

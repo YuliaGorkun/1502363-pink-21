@@ -1,4 +1,18 @@
 //data
+.data {
+  padding: 0px 20px 44px 20px;
+  text-align: center;
+  margin: 0;
+}
+
+.data__surname,
+.data__name,
+.data__patronymic {
+  display: grid;
+  grid-template-rows: auto auto;
+  grid-row-gap: 17px;
+  text-align: left;
+}
 
 .data__label {
   font-weight: normal;
@@ -10,6 +24,7 @@
 .data__input {
   border: 2px solid @border-gray;
   border-radius: 1px;
+  height: 59px;
     &::-webkit-input-placeholder {
       font-weight: normal;
       font-size: 18px;
@@ -21,4 +36,32 @@
     &:focus {
       border: 2px solid @dark-red;
     }
+}
+
+@media (min-width: @tablet-width) {
+  .data__surname,
+  .data__name,
+  .data__patronymic {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    grid-column-gap: 20px;
+    text-align: center;
+    align-items: baseline;
+    margin-bottom: 56px;
+  }
+
+  .data {
+    padding: 0px 22px 9px 20px;
+}
+}
+
+@media (min-width: desktop-width) {
+  .data__surname,
+  .data__name,
+  .data__patronymic {
+    margin-bottom: 58px;
+  }
+.data {
+  padding-top: 11px;
+}
 }
