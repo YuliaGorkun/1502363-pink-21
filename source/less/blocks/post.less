@@ -2,17 +2,43 @@
 
 .post {
   background-color: @light-gray;
+  padding: 20px 20px 41px 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.post__img {
+  text-align: center;
+}
+
+.post__crop,
+.post__color,
+.post__contrast {
+  border: none;
+  text-decoration: none;
 }
 
 .post__filter {
   display: flex;
+  list-style: none;
+  align-items: center;
+  padding-left: 0;
 }
 
 .post__buttons {
+  margin: 38px 0 0 0;
+  text-align: center;
+  display: grid;
+  grid-template-rows: auto auto;
+  grid-row-gap: 12px;
   border-top: 1px solid @border-social-gray;
 }
 
 .post__button-post {
+  display: block;
   border: 3px solid @dark-red;
   box-sizing: border-box;
   border-radius: 30px;
@@ -21,7 +47,7 @@
   line-height: 18px;
   color: @dark-red;
   background-color: transparant;
-  padding: 91px 21px;
+  padding: 21px 90px;
     &:hover {
       color: @basic-white;
       background-color: @dark-red;
@@ -33,6 +59,7 @@
 }
 
 .post__button-cancel {
+  display: block;
   border: 3px solid #283645;
   box-sizing: border-box;
   border-radius: 30px;
@@ -41,6 +68,7 @@
   line-height: 18px;
   opacity: 0.1;
   color: @basic-gray;
+  padding: 21px 103px;
   background-color: transparant;
     &:hover {
     opacity: 0.3;
